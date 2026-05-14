@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-cyber-black: #030508;
+  --color-cyber-navy: #0a1628;
+  --color-neon-green: #00ff9d;
+  --color-neon-blue: #00d4ff;
+  --color-neon-red: #ff3366;
+  --color-glass: rgba(10, 22, 40, 0.55);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-[#030508] text-slate-200 antialiased overflow-x-hidden;
+    font-family: var(--font-mono);
+  }
+
+  ::selection {
+    background: rgba(0, 255, 157, 0.25);
+    color: #e2f8ff;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-[var(--color-neon-green)];
+  }
+
+  @media (min-width: 768px) and (pointer: fine) {
+    body.cyber-hide-cursor,
+    body.cyber-hide-cursor button,
+    body.cyber-hide-cursor a,
+    body.cyber-hide-cursor input,
+    body.cyber-hide-cursor textarea {
+      cursor: none;
+    }
+  }
+}
+
+@utility text-glow-green {
+  text-shadow:
+    0 0 12px rgba(0, 255, 157, 0.65),
+    0 0 28px rgba(0, 255, 157, 0.35);
+}
+
+@utility text-glow-blue {
+  text-shadow:
+    0 0 12px rgba(0, 212, 255, 0.55),
+    0 0 28px rgba(0, 212, 255, 0.28);
+}
+
+@utility border-glow-green {
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 157, 0.35),
+    0 0 24px rgba(0, 255, 157, 0.15),
+    inset 0 0 24px rgba(0, 255, 157, 0.04);
+}
+
+@utility glass-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(12, 28, 48, 0.72) 0%,
+    rgba(6, 14, 26, 0.55) 100%
+  );
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+}
+
+@keyframes glitch-shift {
+  0%,
+  100% {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+  }
+  20% {
+    transform: translate(-2px, 1px);
+    clip-path: inset(12% 0 58% 0);
+  }
+  40% {
+    transform: translate(2px, -1px);
+    clip-path: inset(48% 0 22% 0);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+    clip-path: inset(72% 0 8% 0);
+  }
+  80% {
+    transform: translate(1px, 2px);
+    clip-path: inset(28% 0 42% 0);
+  }
+}
+
+@keyframes scan-move {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes profile-scan {
+  0%,
+  100% {
+    transform: translateY(-105%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(105%);
+    opacity: 0.35;
+  }
+  88% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes binary-fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.cyber-grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black 20%, transparent 75%);
+}
+
+.holo-card {
+  background: linear-gradient(
+    125deg,
+    rgba(0, 255, 157, 0.06) 0%,
+    rgba(0, 212, 255, 0.04) 40%,
+    rgba(255, 51, 102, 0.04) 100%
+  );
+}
