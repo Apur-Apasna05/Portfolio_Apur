@@ -21,6 +21,7 @@ import { GitHubSection } from "./components/sections/GitHubSection"
 import { Contact } from "./components/sections/Contact"
 import { Footer } from "./components/sections/Footer"
 import { usePrefersReducedMotion } from "./hooks/usePrefersReducedMotion"
+import { scrollWindowToTop } from "./utils/scrollToTop"
 
 export default function App() {
   const [loading, setLoading] = useState(true)
@@ -34,17 +35,26 @@ export default function App() {
 
   useLayoutEffect(() => {
     if (loading) return
-    const raw = window.location.hash.slice(1)
-    if (raw === "github") {
+    if (window.location.hash === "#github") {
       window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`)
-      window.scrollTo(0, 0)
-      return
     }
-    window.scrollTo(0, 0)
-    if (raw && raw !== "home") {
-      requestAnimationFrame(() => {
-        document.getElementById(raw)?.scrollIntoView({ behavior: "auto", block: "start" })
-      })
+    scrollWindowToTop()
+  }, [loading])
+
+  /** Late layout (fonts, images, canvas) can restore scroll position on GitHub Pages. */
+  useEffect(() => {
+    if (loading) return
+    scrollWindowToTop()
+    const onLoad = () => scrollWindowToTop()
+    window.addEventListener("load", onLoad)
+    const t0 = window.setTimeout(scrollWindowToTop, 0)
+    const t1 = window.setTimeout(scrollWindowToTop, 120)
+    const t2 = window.setTimeout(scrollWindowToTop, 380)
+    return () => {
+      window.removeEventListener("load", onLoad)
+      clearTimeout(t0)
+      clearTimeout(t1)
+      clearTimeout(t2)
     }
   }, [loading])
 

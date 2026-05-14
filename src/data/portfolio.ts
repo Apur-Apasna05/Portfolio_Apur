@@ -1,20 +1,22 @@
+const base = import.meta.env.BASE_URL
+
 export const PERSON = {
   name: "Apur Apasna",
   role: "Cybersecurity Enthusiast | Ethical Hacking Learner | AI + Security Explorer",
   college: "Stanley College of Engineering and Technology for Women, Hyderabad",
   degree: "B.E in Computer Engineering",
   year: "B.E Computer Engineering · 3rd Year (2023 — 2027)",
-  cgpa: "8.05",
+  cgpa: "8.45",
   email: "apasnaapur@gmail.com",
   phone: "+91 9441776664",
   githubUsername: import.meta.env.VITE_GITHUB_USERNAME ?? "Apur-Apasna05",
-  resumePath: "/resume.pdf",
-  profileImage: "/apur-profile.png",
+  resumePath: `${base}resume.pdf`,
+  profileImage: `${base}apur-profile.png`,
   profileAlt:
     "Apur Apasna — cybersecurity student at Stanley College of Engineering and Technology for Women",
   summary:
     "Highly motivated computer science undergraduate with hands-on experience in cybersecurity, machine learning, and AI-driven application development. Former intern at DRDO (Networking) and contributing as a Tech Lead Intern on LLM-based AI projects. Skilled in Python, FastAPI, Streamlit, Git, and model deployment, with experience building end-to-end systems including fraud detection platforms, malicious URL detectors, and intelligent chatbots. Passionate about ethical hacking, secure systems design, and AI-powered cybersecurity solutions.",
-} as const
+}
 
 export const HERO_TYPING = [
   "Penetration Testing",
