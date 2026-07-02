@@ -11,7 +11,7 @@ export const PERSON = {
   phone: "+91 9441776664",
   githubUsername: import.meta.env.VITE_GITHUB_USERNAME ?? "Apur-Apasna05",
   resumePath: `${base}resume.pdf`,
-  profileImage: `${base}apur-profile.png`,
+  profileImage: `${base}apur-profile.jpg`,
   profileAlt:
     "Apur Apasna — cybersecurity student at Stanley College of Engineering and Technology for Women",
   summary:

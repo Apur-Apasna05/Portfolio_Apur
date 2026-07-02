@@ -21,12 +21,50 @@ const iconFor = (name: (typeof SOCIALS)[number]["icon"]) => {
 }
 
 export function Contact() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle")
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle")
+  const [statusMessage, setStatusMessage] = useState("")
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setStatus("sent")
-    window.setTimeout(() => setStatus("idle"), 4000)
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+    if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
+      setStatus("error")
+      setStatusMessage("Uplink failed: VITE_WEB3FORMS_ACCESS_KEY is not configured in environment variables.")
+      return
+    }
+
+    setStatus("sending")
+    setStatusMessage("")
+
+    const formData = new FormData(e.currentTarget)
+    formData.append("access_key", accessKey)
+    formData.append("subject", `New message from ${formData.get("name")} (Portfolio)`)
+    formData.append("from_name", "Cybersecurity Portfolio Uplink")
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      })
+      const data = await response.json()
+      if (data.success) {
+        setStatus("sent")
+        setStatusMessage("Transmission successful! Message packets successfully routed to destination.")
+        e.currentTarget.reset()
+      } else {
+        setStatus("error")
+        setStatusMessage(data.message || "Uplink rejected packets. Transmission failed.")
+      }
+    } catch (error) {
+      setStatus("error")
+      setStatusMessage("Transmission failed: Link connection timed out.")
+    }
+
+    window.setTimeout(() => {
+      setStatus("idle")
+      setStatusMessage("")
+    }, 6000)
   }
 
   return (
@@ -81,16 +119,26 @@ export function Contact() {
               </div>
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#00ff9d]/45 bg-[#00ff9d]/10 py-3 font-display text-sm font-bold uppercase tracking-widest text-[#00ff9d] shadow-[0_0_24px_rgba(0,255,157,0.2)] transition-colors hover:bg-[#00ff9d]/20 sm:w-auto sm:px-10"
+                disabled={status === "sending"}
+                whileHover={status === "sending" ? {} : { scale: 1.02 }}
+                whileTap={status === "sending" ? {} : { scale: 0.98 }}
+                className={`inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#00ff9d]/45 py-3 font-display text-sm font-bold uppercase tracking-widest text-[#00ff9d] shadow-[0_0_24px_rgba(0,255,157,0.2)] transition-colors sm:w-auto sm:px-10 ${
+                  status === "sending"
+                    ? "bg-[#00ff9d]/5 opacity-60 cursor-not-allowed"
+                    : "bg-[#00ff9d]/10 hover:bg-[#00ff9d]/20"
+                }`}
               >
-                <Send className="h-4 w-4" aria-hidden />
-                Transmit
+                <Send className={`h-4 w-4 ${status === "sending" ? "animate-pulse" : ""}`} aria-hidden />
+                {status === "sending" ? "Transmitting..." : "Transmit"}
               </motion.button>
               {status === "sent" ? (
-                <p className="font-mono text-xs text-[#00d4ff]" role="status">
-                  Packet queued (demo). Email {PERSON.email} for a real response.
+                <p className="font-mono text-xs text-[#00ff9d]" role="status">
+                  {statusMessage}
+                </p>
+              ) : null}
+              {status === "error" ? (
+                <p className="font-mono text-xs text-[#ff3366]" role="status">
+                  {statusMessage}
                 </p>
               ) : null}
             </form>
