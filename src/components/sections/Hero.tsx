@@ -65,8 +65,6 @@ export function Hero() {
               transition={{ delay: 0.45 }}
               className="mt-8 flex min-h-[2.5rem] flex-wrap items-center gap-2 font-mono text-base text-slate-300 md:text-xl"
             >
-              <span className="text-[#ff3366]">$</span>
-              <span className="text-slate-500">focus</span>
               <span className="text-[#00ff9d]">--vector</span>
               <Typewriter words={HERO_TYPING} />
             </motion.div>
