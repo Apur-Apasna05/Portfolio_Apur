@@ -14,7 +14,7 @@ export function AnimatedCounter({
   duration = 2000,
   className = "",
 }: Props) {
-  const [display, setDisplay] = useState(0)
+  const [display, setDisplay] = useState<number | string>(0)
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
   const started = useRef(false)
 
@@ -26,7 +26,14 @@ export function AnimatedCounter({
     const tick = (now: number) => {
       const t = Math.min(1, (now - t0) / duration)
       const eased = 1 - (1 - t) ** 3
-      setDisplay(Math.round(eased * value))
+      const currentVal = eased * value
+      
+      if (Number.isInteger(value)) {
+        setDisplay(Math.round(currentVal))
+      } else {
+        setDisplay(currentVal.toFixed(1))
+      }
+
       if (t < 1) raf = requestAnimationFrame(tick)
     }
     raf = requestAnimationFrame(tick)

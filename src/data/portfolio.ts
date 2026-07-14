@@ -49,11 +49,11 @@ export const SOCIALS = [
 ]
 
 export const STATS = [
-  { label: "Projects", value: 8, suffix: "+" },
+  { label: "Projects", value: 12, suffix: "" },
   { label: "Certifications", value: 4, suffix: "" },
   { label: "Internships", value: 2, suffix: "" },
   { label: "GitHub Contributions", value: 79, suffix: "" },
-  { label: "LinkedIn Followers", value: 1100, suffix: "+" },
+  { label: "LinkedIn Followers", value: 1.1, suffix: "k" },
 ] as const
 
 export const SKILLS = [
