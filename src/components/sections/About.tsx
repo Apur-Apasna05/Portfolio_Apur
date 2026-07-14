@@ -72,26 +72,40 @@ export function About() {
           </GlassPanel>
 
           <div className="grid grid-cols-2 gap-4">
-            {STATS.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="glass-panel flex flex-col justify-between rounded-2xl border border-[#00d4ff]/20 p-5 shadow-[0_0_30px_rgba(0,212,255,0.08)]"
-              >
-                <Radar className="h-5 w-5 text-[#00ff9d]/70" aria-hidden />
-                <div className="mt-6">
-                  <p className="font-display text-3xl font-bold text-white md:text-4xl">
-                    <AnimatedCounter value={s.value} suffix={s.suffix} />
-                  </p>
-                  <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-slate-500">
-                    {s.label}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+            {STATS.map((s, i) => {
+              const isLastOdd = i === STATS.length - 1 && STATS.length % 2 !== 0
+              return (
+                <motion.div
+                  key={s.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className={`glass-panel flex flex-col justify-between rounded-2xl border border-[#00d4ff]/20 p-5 shadow-[0_0_30px_rgba(0,212,255,0.08)] ${
+                    isLastOdd ? "col-span-2 flex-row sm:flex-row items-center justify-between" : ""
+                  }`}
+                >
+                  <div className={isLastOdd ? "flex items-center gap-4" : ""}>
+                    <Radar className="h-5 w-5 text-[#00ff9d]/70" aria-hidden />
+                    {isLastOdd && (
+                      <p className="font-mono text-[11px] uppercase tracking-wider text-slate-500">
+                        {s.label}
+                      </p>
+                    )}
+                  </div>
+                  <div className={isLastOdd ? "text-right" : "mt-6"}>
+                    <p className="font-display text-3xl font-bold text-white md:text-4xl">
+                      <AnimatedCounter value={s.value} suffix={s.suffix} />
+                    </p>
+                    {!isLastOdd && (
+                      <p className="mt-1 font-mono text-[11px] uppercase tracking-wider text-slate-500">
+                        {s.label}
+                      </p>
+                    )}
+                  </div>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </div>

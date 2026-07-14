@@ -52,7 +52,8 @@ export const STATS = [
   { label: "Projects", value: 8, suffix: "+" },
   { label: "Certifications", value: 4, suffix: "" },
   { label: "Internships", value: 2, suffix: "" },
-  { label: "GitHub Contributions", value: 350, suffix: "+" },
+  { label: "GitHub Contributions", value: 79, suffix: "" },
+  { label: "LinkedIn Followers", value: 1100, suffix: "+" },
 ] as const
 
 export const SKILLS = [
