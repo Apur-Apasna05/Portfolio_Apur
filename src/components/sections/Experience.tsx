@@ -11,7 +11,7 @@ export function Experience() {
         <SectionHeading
           kicker="Chronicle"
           title="Experience stream"
-          subtitle="Internships, research threads, and community velocity — mapped as a defense timeline."
+          subtitle="Software development, distributed systems research, and QA automation roles."
         />
 
         <GlassPanel className="relative">

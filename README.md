@@ -1,251 +1,110 @@
-# 👨‍💻 Apur Apasna — Cybersecurity Portfolio
+# 👩‍💻 Apur Apasna — Software Developer Portfolio
 
-Welcome to my futuristic cybersecurity portfolio website 🚀  
-This portfolio represents my journey in **Cybersecurity, Ethical Hacking, AI, and Secure System Development**.
+Welcome to the interactive portfolio website of **Apur Apasna** 🚀  
+Showcasing backend development, software testing & QA, REST APIs, and distributed systems engineering.
 
 ---
 
 ## 🌐 About Me
 
-Hi, I'm **Apur Apasna**, a B.Tech 3rd Year student at Stanley College of Engineering and Technology for Women, Hyderabad, with a strong passion for:
+Hi, I'm **Apur Apasna**, a Computer Engineering student (2023–2027) at Stanley College of Engineering and Technology for Women, Hyderabad.
 
-- 🔐 Cybersecurity
-- 🕵️ Ethical Hacking
-- 🌐 Networking
-- 🤖 Artificial Intelligence
-- 🛡️ Threat Analysis
-- 💻 Secure Application Development
-
-I aspire to build a career in cybersecurity and contribute to organizations like DRDO.
+- 💻 Backend Development (Spring Boot, FastAPI, REST APIs, Microservices)
+- 🧪 Software Testing, Debugging & QA Automation (Cypress, JUnit)
+- 🌐 Distributed Systems & Computer Networks
+- 🗄️ Relational & NoSQL Databases (MySQL, PostgreSQL, MongoDB)
+- 🐳 Containerization & Tooling (Docker, Postman, Maven, Linux, Git)
 
 ---
 
-# 🚀 Portfolio Features
+## 🛠️ Tech Stack & Skills
 
-✨ Futuristic cyberpunk UI  
-✨ Hacker/SOC dashboard-inspired design  
-✨ Matrix rain animations  
-✨ Interactive terminal section  
-✨ Responsive design for all devices  
-✨ Smooth animations using Framer Motion  
-✨ Cybersecurity project showcase  
-✨ GitHub contribution dashboard  
-✨ Animated skill visualizations  
-✨ Neon glow effects & holographic cards  
+### Languages & Core CS
+- **Languages:** Java, JavaScript, Python, Kotlin, SQL
+- **Core CS:** Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks
 
----
+### Backend & Databases
+- **Backend Frameworks:** Spring Boot, FastAPI, REST APIs, Microservices Fundamentals
+- **Databases:** MySQL, PostgreSQL, MongoDB
 
-# 🛠️ Tech Stack
-
-## Frontend
-- React.js
-- Vite
-- Tailwind CSS
-- Framer Motion
-
-## Animations & Effects
-- tsParticles / Three.js
-- Matrix Rain Effects
-- Glitch Text Animations
-
-## Icons & UI
-- Lucide React
-- Glassmorphism UI
-- Responsive Design
+### Testing & Tools
+- **Testing:** Cypress, JUnit, Regression Testing, Automated Workflows
+- **Tools:** Git, GitHub, Docker, Postman, Maven, Linux
 
 ---
 
-# 🧠 Skills
+## 📂 Featured Projects
 
-- Python
-- Kali Linux
-- Networking
-- Ethical Hacking
-- Wireshark
-- Linux
-- OSINT
-- AI/ML
-- Streamlit
-- Git & GitHub
+### 🌍 TerraScope — Geospatial Intelligence & Monitoring Platform
+- **Stack:** Python, FastAPI, REST APIs, Pandas, NumPy
+- Developed backend services to collect and process information from disparate environmental and meteorological data sources.
+- Unified multi-source geospatial data onto a centralized platform with structured APIs for real-time monitoring.
 
----
+### 📡 Aether Lite — Offline P2P Mesh Communication Platform
+- **Stack:** Kotlin, Android, BLE, Room Database, Coroutines
+- Built an Android application enabling offline peer-to-peer message exchange without active internet connectivity.
+- Implemented multi-hop mesh message forwarding, Room database local persistence, and background task management using WorkManager.
 
-# 📂 Featured Projects
+### 🌟 SheBuilds
+- **Stack:** JavaScript, React, Tailwind CSS, Web
+- Community-focused web application emphasizing inclusive engineering, clean architecture, and responsive user interfaces.
 
-## 🔍 Malicious URL Detector
-AI-powered system to detect suspicious and phishing URLs using Machine Learning techniques.
+### 📊 ClaimWatch AI — Analytics Platform
+- **Stack:** Python, FastAPI, scikit-learn, Pandas, Streamlit
+- End-to-end data analytics and anomaly detection system integrating supervised ML models with FastAPI backend services and interactive reporting dashboards.
 
-## 📡 SmartScan Attend
-Smart QR-based attendance system with admin dashboard, IP validation, and analytics.
-
-## 🤖 VidyaGPT
-AI tutor platform supporting Indian languages with quizzes, PDF export, and voice assistance.
-
-## ✈️ AI Travel Assistant
-Travel recommendation chatbot using Hugging Face and AI models.
-
-## 🔐 Password Strength Checker
-Cybersecurity tool to analyze password complexity and vulnerabilities.
-
-## 🌐 Network Scanner
-Python-based network scanning utility for identifying connected devices and open ports.
-
-## 🎭 Phishing Awareness Simulator
-Educational phishing simulation tool for cybersecurity awareness training.
+### 📱 SmartScan Attend
+- **Stack:** Python, FastAPI, SQLite, HTML/CSS
+- Role-based attendance tracking platform featuring QR validation, real-time logging, and interactive administrative analytics.
 
 ---
 
-# 💼 Experience
+## 💼 Experience
 
-### 🛡️ DRDO Internship
-Worked on networking and cybersecurity-related concepts and practical implementations.
+### 🚀 Software Developer — Viswam.ai
+*May 2025 – Nov 2025 | Hyderabad, India*
+- Tested website features and user workflows using Cypress to identify issues and ensure optimal application behavior.
+- Created automated test cases to validate different pages, user actions, and application functionality.
+- Worked closely with developers to understand reported issues, track bugs, and verify fixes.
+- Performed regression testing after updates to make sure existing features continued to work properly.
 
-### 🤖 AI Internship
-Contributed to AI-based projects involving LLMs and intelligent systems.
-
-### 🌍 Open Source Contributions
-Participated in community-driven development and collaborative projects.
-
----
-
-# 📜 Certifications & Achievements
-
-- Cybersecurity Workshops
-- AI & ML Internships
-- Hackathon Participation
-- Technical Events
-- Open Source Contributions
+### 🛰️ Research Intern — Distributed Networks & Systems — DRDO–DRDL
+*May 2025 – Aug 2025 | Hyderabad, India*
+- Explored distributed network architectures and reliable communication protocols used in defense communication systems.
+- Researched transmission mechanisms and multi-node data exchange across complex network topologies.
+- Assisted with system resilience testing, fault analysis, and system behavior modeling in controlled test environments.
+- Applied core networking and operating systems concepts to analyze performance and optimize system throughput.
 
 ---
 
-# 🖥️ Interactive Terminal
+## 📬 Contact
 
-The portfolio includes a fake Linux-style terminal where users can run commands such as:
-
-```bash
-help
-whoami
-skills
-projects
-contact
-socials
-```
+- **Email:** apurapasnaa@gmail.com
+- **Phone:** +91 9441776664
+- **GitHub:** [https://github.com/Apur-Apasna05](https://github.com/Apur-Apasna05)
+- **LinkedIn:** [https://www.linkedin.com/in/apur-apasna](https://www.linkedin.com/in/apur-apasna)
 
 ---
 
-# 📊 GitHub Dashboard
+## ⚡ Local Setup
 
-Integrated GitHub analytics including:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Apur-Apasna05/Portfolio_Apur.git
+   cd Portfolio_Apur
+   ```
 
-- Contribution Heatmap
-- GitHub Streak
-- Language Usage
-- Activity Graph
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
----
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
 
-# 📬 Contact Me
-
-📧 Email: apasnaapur@gmail.com  
-📱 Phone: +91 9441776664
-
----
-
-# ⚡ Installation
-
-Clone the repository:
-
-```bash
-git clone <your-repository-link>
-```
-
-Navigate to the project folder:
-
-```bash
-cd portfolio
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
----
-
-## New GitHub repo & GitHub Pages
-
-After you create a **new** repository (and optionally delete the old one):
-
-1. **Clone the new repo** locally and copy this project in, or change your `git remote` to the new repo URL.
-
-2. **Create `.env.production`** in the project root (same folder as `package.json`). Copy from `.env.example` and set:
-   - **`VITE_BASE_PATH`** — must match the repo name for a **project site**:  
-     `VITE_BASE_PATH=/my-new-repo/` if the site will be `https://YOURUSER.github.io/my-new-repo/`
-   - **`VITE_SITE_URL`** — full site root, **no** trailing slash:  
-     `VITE_SITE_URL=https://YOURUSER.github.io/my-new-repo`
-   - **`VITE_GITHUB_USERNAME`** — your GitHub login (for API + stats).
-
-3. **Build** (uses `.env.production` automatically in production mode):
-
+4. **Build for production:**
    ```bash
    npm run build
    ```
-
-4. **Deploy** (example with `gh-pages`; your `package.json` already has a `deploy` script):
-
-   ```bash
-   npm run deploy
-   ```
-
-5. On GitHub: **Settings → Pages** → set source to the branch **`gh-pages`** (or whatever `gh-pages` publishes), root **`/`**.
-
-If you use a **user site** (`YOURUSER.github.io` from a repo named `YOURUSER.github.io`), set `VITE_BASE_PATH=/` and `VITE_SITE_URL=https://YOURUSER.github.io`.
-
----
-
-# 🏗️ Future Enhancements
-
-- AI chatbot assistant
-- Real-time cybersecurity news feed
-- Blog section
-- Dark/Light mode toggle
-- Live threat visualization dashboard
-- Resume generator
-
----
-
-# 🎯 Goal
-
-This portfolio is designed to showcase my:
-- Technical skills
-- Cybersecurity journey
-- AI projects
-- Research interests
-- Professional growth
-
-while maintaining a futuristic and professional hacker-themed experience.
-
----
-
-# ⭐ Connect With Me
-
-- GitHub
-- LinkedIn
-- Instagram
-
----
-
-## ⚠️ Disclaimer
-
-This portfolio is built for educational, professional, and ethical purposes only.  
-All cybersecurity-related content is intended strictly for learning and awareness.
-
----
-

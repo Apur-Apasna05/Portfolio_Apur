@@ -40,7 +40,7 @@ export function Contact() {
     const formData = new FormData(e.currentTarget)
     formData.append("access_key", accessKey)
     formData.append("subject", `New message from ${formData.get("name")} (Portfolio)`)
-    formData.append("from_name", "Cybersecurity Portfolio Uplink")
+    formData.append("from_name", "Portfolio Contact Form")
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -50,15 +50,15 @@ export function Contact() {
       const data = await response.json()
       if (data.success) {
         setStatus("sent")
-        setStatusMessage("Transmission successful! Message packets successfully routed to destination.")
+        setStatusMessage("Message sent successfully! Thank you for reaching out.")
         e.currentTarget.reset()
       } else {
         setStatus("error")
-        setStatusMessage(data.message || "Uplink rejected packets. Transmission failed.")
+        setStatusMessage(data.message || "Failed to send message. Please try again.")
       }
     } catch (error) {
       setStatus("error")
-      setStatusMessage("Transmission failed: Link connection timed out.")
+      setStatusMessage("Failed to send message: connection timed out.")
     }
 
     window.setTimeout(() => {
@@ -71,9 +71,9 @@ export function Contact() {
     <MotionSection id="contact" className="relative z-10 px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          kicker="Uplink"
-          title="Establish contact"
-          subtitle="Encrypted-style form for recruiters and collaborators — messages are simulated client-side only."
+          kicker="Contact"
+          title="Get in touch"
+          subtitle="Send a message for software engineering opportunities, technical collaborations, or questions."
         />
 
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -88,7 +88,7 @@ export function Contact() {
                   name="name"
                   required
                   className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 font-mono text-sm text-white outline-none transition-colors focus:border-[#00d4ff]/60"
-                  placeholder="Your designation"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
@@ -101,7 +101,7 @@ export function Contact() {
                   type="email"
                   required
                   className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-3 font-mono text-sm text-white outline-none transition-colors focus:border-[#00d4ff]/60"
-                  placeholder="you@domain.sec"
+                  placeholder="you@example.com"
                 />
               </div>
               <div>
@@ -114,7 +114,7 @@ export function Contact() {
                   required
                   rows={5}
                   className="w-full resize-y rounded-xl border border-white/10 bg-black/40 px-4 py-3 font-mono text-sm text-white outline-none transition-colors focus:border-[#00d4ff]/60"
-                  placeholder="Mission parameters, collaboration scope, or internship signal..."
+                  placeholder="Your project inquiry, collaboration scope, or question..."
                 />
               </div>
               <motion.button
@@ -129,7 +129,7 @@ export function Contact() {
                 }`}
               >
                 <Send className={`h-4 w-4 ${status === "sending" ? "animate-pulse" : ""}`} aria-hidden />
-                {status === "sending" ? "Transmitting..." : "Transmit"}
+                {status === "sending" ? "Sending..." : "Send Message"}
               </motion.button>
               {status === "sent" ? (
                 <p className="font-mono text-xs text-[#00ff9d]" role="status">

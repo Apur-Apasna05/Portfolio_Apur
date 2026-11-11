@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { Shield } from "lucide-react"
+import { Code2 } from "lucide-react"
 import { usePrefersReducedMotion } from "../../hooks/usePrefersReducedMotion"
 
 type Props = {
@@ -25,12 +25,12 @@ export function LoadingScreen({ done, onComplete }: Props) {
             transition={{ repeat: Infinity, duration: 2.4, ease: "linear" }}
             className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-[#00ff9d]/40 bg-[#0a1628]/80 shadow-[0_0_40px_rgba(0,255,157,0.2)]"
           >
-            <Shield className="h-10 w-10 text-[#00d4ff]" aria-hidden />
+            <Code2 className="h-10 w-10 text-[#00d4ff]" aria-hidden />
           </motion.div>
           <p className="font-display text-sm uppercase tracking-[0.4em] text-[#00ff9d]">
             Initializing
           </p>
-          <p className="mt-2 font-mono text-xs text-slate-500">Secure channel · AES-256</p>
+          <p className="mt-2 font-mono text-xs text-slate-500">System Environment · Online</p>
           {!reduced ? (
             <motion.div
               className="mt-8 h-1 w-48 overflow-hidden rounded-full bg-slate-800"

@@ -65,7 +65,7 @@ export function Hero() {
               transition={{ delay: 0.45 }}
               className="mt-8 flex min-h-[2.5rem] flex-wrap items-center gap-2 font-mono text-base text-slate-300 md:text-xl"
             >
-              <span className="text-[#00ff9d]">--vector</span>
+              <span className="text-[#00ff9d]">--focus</span>
               <Typewriter words={HERO_TYPING} />
             </motion.div>
 
@@ -97,7 +97,7 @@ export function Hero() {
               className="mt-20 inline-flex items-center gap-2 font-mono text-xs text-slate-500 hover:text-[#00d4ff]"
             >
               <ChevronDown className="h-4 w-4 animate-bounce" aria-hidden />
-              Scroll to decrypt profile
+              Scroll to explore profile
             </motion.a>
           </div>
 

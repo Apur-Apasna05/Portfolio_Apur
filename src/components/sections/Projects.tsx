@@ -202,7 +202,7 @@ export function Projects() {
         <SectionHeading
           kicker="Deployments"
           title="Signature builds"
-          subtitle="Curated portfolio work merged with live repositories from GitHub — SheBuilds is featured."
+          subtitle="Core backend systems, mesh communications, and data-driven platforms merged with live GitHub repositories."
         />
 
         {gh.status === "loading" ? (

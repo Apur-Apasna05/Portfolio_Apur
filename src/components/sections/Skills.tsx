@@ -9,8 +9,8 @@ export function Skills() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           kicker="Skill matrix"
-          title="Offensive · defensive stack"
-          subtitle="Proficiency estimates based on labs, coursework, and hands-on build cycles."
+          title="Core technical stack"
+          subtitle="Proficiency estimates based on hands-on development, automated testing, and coursework."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -39,7 +39,7 @@ export function Skills() {
                 />
               </div>
               <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-slate-500">
-                clearance · tier {(skill.percent / 20).toFixed(0)}
+                proficiency · tier {(skill.percent / 20).toFixed(0)}
               </p>
             </motion.article>
           ))}

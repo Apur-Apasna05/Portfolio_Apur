@@ -13,7 +13,7 @@ export function About() {
         <SectionHeading
           kicker="Profile / ABOUT"
           title="About"
-          subtitle="Academic trajectory, mission interests, and integrity-first security mindset."
+          subtitle="Academic trajectory, backend engineering foundations, and quality-driven development."
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
@@ -40,11 +40,10 @@ export function About() {
             </p>
 
             <p className="relative mt-4 text-sm leading-relaxed text-slate-400 md:text-base">
-              At <span className="text-[#00ff9d]">{PERSON.college}</span>, she connects adversarial
-              thinking with responsible engineering — from{" "}
-              <strong className="text-white">DRDO-DRDL networking labs</strong> to{" "}
-              <strong className="text-white">LLM-based systems at Swecha</strong> and production-style
-              ML deployments.
+              At <span className="text-[#00ff9d]">{PERSON.college}</span>, she focuses on reliable backend
+              architecture, comprehensive automated testing, and distributed networking — backed by practical
+              experience at <strong className="text-white">Viswam.ai</strong>,{" "}
+              <strong className="text-white">DRDO-DRDL</strong>, and open-source initiatives.
             </p>
 
             <div className="relative mt-8 grid gap-4 sm:grid-cols-3">
@@ -64,7 +63,7 @@ export function About() {
                     Focus
                   </p>
                   <p className="text-sm text-slate-200">
-                    Offensive awareness · defensive depth · AI assurance
+                    Backend Architecture · Automated QA · REST APIs & Microservices
                   </p>
                 </div>
               </div>

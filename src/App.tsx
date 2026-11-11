@@ -1,7 +1,7 @@
 import { useLayoutEffect, useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { MatrixRain } from "./components/effects/MatrixRain"
-import { CyberGrid } from "./components/effects/CyberGrid"
+import { TechGrid } from "./components/effects/TechGrid"
 import { ScanLine } from "./components/effects/ScanLine"
 import { BinaryStream } from "./components/effects/BinaryStream"
 import { ParticleField } from "./components/effects/ParticleField"
@@ -16,7 +16,7 @@ import { Tools } from "./components/sections/Tools"
 import { Projects } from "./components/sections/Projects"
 import { Experience } from "./components/sections/Experience"
 import { Certifications } from "./components/sections/Certifications"
-import { HackerTerminal } from "./components/sections/HackerTerminal"
+import { TerminalSection } from "./components/sections/TerminalSection"
 import { GitHubSection } from "./components/sections/GitHubSection"
 import { Contact } from "./components/sections/Contact"
 import { Footer } from "./components/sections/Footer"
@@ -89,7 +89,7 @@ export default function App() {
       <div className="relative min-h-screen bg-[#030508]">
         <MatrixRain />
         <ParticleField />
-        <CyberGrid />
+        <TechGrid />
         <BinaryStream />
         <ScanLine />
 
@@ -111,7 +111,7 @@ export default function App() {
                 <Projects />
                 <Experience />
                 <Certifications />
-                <HackerTerminal />
+                <TerminalSection />
                 <GitHubSection />
                 <Contact />
                 <Footer />

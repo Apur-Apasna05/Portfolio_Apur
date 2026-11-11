@@ -30,9 +30,9 @@ export function Tools() {
     <MotionSection id="tools" className="relative z-10 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <SectionHeading
-          kicker="Arsenal"
-          title="Cyber tool showcase"
-          subtitle="Authorized-use tooling cards with terminal-style reveals on interaction."
+          kicker="Toolchain"
+          title="Developer & QA toolkit"
+          subtitle="Development, testing, and containerization tooling cards with terminal-style reveals."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -79,7 +79,7 @@ export function Tools() {
                       className="overflow-hidden"
                     >
                       <div className="mt-4 rounded-lg border border-white/10 bg-black/50 p-3 font-mono text-xs leading-relaxed text-slate-300">
-                        <p className="mb-2 text-[#00ff9d]">root@defense-grid:~# info {tool.name.toLowerCase()}</p>
+                        <p className="mb-2 text-[#00ff9d]">developer@workstation:~$ info {tool.name.toLowerCase()}</p>
                         <p>{tool.desc}</p>
                       </div>
                     </motion.div>

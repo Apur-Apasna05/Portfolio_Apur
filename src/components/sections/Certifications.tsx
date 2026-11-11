@@ -11,7 +11,7 @@ export function Certifications() {
         <SectionHeading
           kicker="Credentials"
           title="Certification lattice"
-          subtitle="Formal and project-backed credentials that validate depth across security and AI."
+          subtitle="Formal credentials and industry simulations validating software engineering and systems knowledge."
         />
 
         <div className="grid gap-5 md:grid-cols-2">

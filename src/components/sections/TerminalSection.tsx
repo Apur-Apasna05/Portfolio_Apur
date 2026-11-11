@@ -21,10 +21,10 @@ function typeText(full: string, onUpdate: (s: string) => void, onDone: () => voi
   return () => window.clearInterval(id)
 }
 
-const WELCOME = `AA_DEFENSE_SHELL v2.6.0 — authorized simulation only.
+const WELCOME = `AA_DEV_SHELL v2.6.0 — interactive portfolio terminal.
 Type 'help' for available commands.`
 
-export function HackerTerminal() {
+export function TerminalSection() {
   const [lines, setLines] = useState<Line[]>([{ kind: "out", text: WELCOME, id: "boot" }])
   const [input, setInput] = useState("")
   const [busy, setBusy] = useState(false)
@@ -70,7 +70,7 @@ export function HackerTerminal() {
         case "help":
           out = `Available commands:
   help       — show this message
-  whoami     — operator profile
+  whoami     — developer profile
   skills     — stack proficiency list
   projects   — deployed build index
   socials    — external uplinks
@@ -83,7 +83,7 @@ ${PERSON.role}
 ${PERSON.degree} · ${PERSON.college}
 ${PERSON.year} · CGPA ${PERSON.cgpa}
 GitHub: github.com/${PERSON.githubUsername}
-Swecha: code.swecha.org/APASNA`
+Email : ${PERSON.email}`
           break
         case "skills":
           out = SKILLS.map((s) => `  · ${s.name.padEnd(18)} ${s.percent}%`).join("\n")
@@ -98,7 +98,7 @@ Swecha: code.swecha.org/APASNA`
         case "contact":
           out = `Email : ${PERSON.email}
 Phone : ${PERSON.phone}
-Signal: request via encrypted mail preferred.`
+Status: Open for Software Engineering & Backend opportunities.`
           break
         default:
           out = `bash: command not found: ${raw}
@@ -123,7 +123,7 @@ Hint: type 'help' for command manifest.`
         <SectionHeading
           kicker="Subsystem"
           title="Interactive shell"
-          subtitle="A sandboxed command surface for recruiters — no real system access."
+          subtitle="An interactive command surface to explore developer background and repositories."
         />
 
         <motion.div
@@ -135,7 +135,7 @@ Hint: type 'help' for command manifest.`
             <span className="h-3 w-3 rounded-full bg-amber-400/90" />
             <span className="h-3 w-3 rounded-full bg-[#00ff9d]/90" />
             <span className="ml-4 font-mono text-[11px] text-slate-500">
-              zsh — aa@defense-grid — ~80x24
+              zsh — apur@workspace — ~80x24
             </span>
           </div>
 
@@ -188,3 +188,5 @@ Hint: type 'help' for command manifest.`
     </MotionSection>
   )
 }
+
+export const HackerTerminal = TerminalSection
